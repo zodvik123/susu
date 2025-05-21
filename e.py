@@ -3576,8 +3576,10 @@ except RuntimeError:
     app_event_loop = asyncio.new_event_loop()
     asyncio.set_event_loop(app_event_loop)
 
-application = Application.builder().token("8095931824:AAG2srjhFG4dsUHJIBEoEF1OF-MOtsLY0ls").build()
+TELEGRAM_BOT_TOKEN = "8095931824:AAG2srjhFG4dsUHJIBEoEF1OF-MOtsLY0ls"
 application = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
+
+application.run_polling()
 
 
 if __name__ == '__main__':
